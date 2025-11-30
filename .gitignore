@@ -1,0 +1,21 @@
+# -----------------------------
+# Build artifacts
+# -----------------------------
+
+.zig-cache
+zig-out/
+*.o
+*.obj
+*.a
+*.lib
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Zig test cache
+test-cache/
+cache/
+
+# Any log file
+*.log
