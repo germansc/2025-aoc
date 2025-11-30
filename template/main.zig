@@ -44,3 +44,21 @@ fn solve_part_2(allocator: std.mem.Allocator, input: []const u8) !i64 {
     // TODO: Implement Part 2
     return 0;
 }
+
+test "part 1 sample" {
+    const data = @embedFile("sample.txt");
+    const allocator = std.testing.allocator;
+
+    const expected: i64 = 0;
+
+    try std.testing.expectEqual(expected, solve_part_1(allocator, data));
+}
+
+test "part 2 sample" {
+    const data = @embedFile("sample.txt");
+    const allocator = std.testing.allocator;
+
+    const expected: i64 = 0;
+
+    try std.testing.expectEqual(expected, solve_part_2(allocator, data));
+}
