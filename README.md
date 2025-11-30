@@ -37,7 +37,7 @@ cat day01/input.txt | zig build day01
 To build all solutions, for benchmarking or whatever, simply:
 
 ```bash
-zig build -OReleaseFast
+zig build
 ```
 
 ###### 2025 | germansc
