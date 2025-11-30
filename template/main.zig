@@ -45,9 +45,22 @@ fn solve_part_2(allocator: std.mem.Allocator, input: []const u8) !i64 {
     return 0;
 }
 
+// ---------------------------- UNIT TESTING -------------------------------
+
+/// Helper function to ignore a test block execution.
+/// It logs a warning for the user and returns "true".
+inline fn test_ignore(src: std.builtin.SourceLocation) bool {
+    std.log.warn("IGNORED: Test '{s}' [ {s}:{d} ] is a placeholder.", .{ src.fn_name, src.file, src.line });
+    std.log.warn("         Add its expected value and remove the 'test_ignore' guard to execute.", .{});
+    return true;
+}
+
 test "part 1 sample" {
     const data = @embedFile("sample.txt");
     const allocator = std.testing.allocator;
+
+    // TEST Ignore - Add its expected value below and remove this guard to run the test.
+    if (test_ignore(@src())) return;
 
     const expected: i64 = 0;
 
@@ -57,6 +70,9 @@ test "part 1 sample" {
 test "part 2 sample" {
     const data = @embedFile("sample.txt");
     const allocator = std.testing.allocator;
+
+    // TEST Ignore - Add expected values and remove this guard to run the test.
+    if (test_ignore(@src())) return;
 
     const expected: i64 = 0;
 
