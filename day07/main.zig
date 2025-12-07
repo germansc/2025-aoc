@@ -145,7 +145,7 @@ fn solve_part_2(allocator: std.mem.Allocator, input: []const u8) !i64 {
     // possible roads by starting from the bottom, knowing that all those cells
     // have one way out, and then iterating up. Each splitter simply adds the
     // possible roads from its two surrounding cells (which took their values
-    // from the two cells below them).
+    // from the cell below each one).
     const map = try CharMap.init(allocator, input);
     defer map.deinit(allocator);
 
